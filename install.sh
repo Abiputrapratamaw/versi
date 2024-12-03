@@ -91,10 +91,10 @@ EOF
 # Configure network
 configure_network() {
     echo -e "${YELLOW}Configuring network settings...${NC}"
-    IP=$(curl -s http://169.254.169.254/metadata/v1/interfaces/public/0/ipv4/address)
-    NETMASK=$(curl -s http://169.254.169.254/metadata/v1/interfaces/public/0/ipv4/netmask)
-    GATEWAY=$(curl -s http://169.254.169.254/metadata/v1/interfaces/public/0/ipv4/gateway)
-    MAC=$(curl -s http://169.254.169.254/metadata/v1/interfaces/public/0/mac)
+    IP=$(curl -4 -s icanhazip.com)
+    NETMASK=$(255.255.240.0.)
+    GATEWAY=$(ip route | awk '/default/ { print $3 }')
+    MAC=$(82:4d:fe:b9:5a:f0)
     
     # Set network in registry
     cat > /tmp/network.reg << EOF
