@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 20%;
+            font-size: 3em;
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red, -2px -2px blue; }
+            50% { text-shadow: -2px -2px red, 2px 2px blue; }
+            100% { text-shadow: 2px 2px red, -2px -2px blue; }
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .skull {
+            font-size: 8em;
+            line-height: 1;
+        }
+
+        .flashing {
+            animation: flash 1s infinite alternate;
+        }
+
+        @keyframes flash {
+            from { color: red; }
+            to { color: white; }
+        }
+    </style>
+</head>
+<body>
+    <div class="skull">☠</div>
+    <h1>THIS WEBSITE HAS BEEN HACKED</h1>
+    <p class="flashing">You have been pwned! Secure your site properly next time.</p>
+</body>
+  </html>
